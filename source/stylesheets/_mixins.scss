@@ -1,0 +1,49 @@
+@mixin bg-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+@mixin retina-bg($image-url, $extra-query: "only screen") {
+  @media
+    #{$extra-query} and (-webkit-min-device-pixel-ratio: 2),
+    #{$extra-query} and (   min--moz-device-pixel-ratio: 2),
+    #{$extra-query} and (     -o-min-device-pixel-ratio: 2/1),
+    #{$extra-query} and (        min-device-pixel-ratio: 2),
+    #{$extra-query} and (                min-resolution: 2dppx) {
+    background-image: $image-url;
+  }
+}
+
+@mixin responsive-bg($path-prefix) {
+  @media #{$small-up}  {
+    background-image: image-url("#{$path-prefix}-s.jpg");
+  }
+  @include retina-bg(image-url("#{$path-prefix}-m.jpg"), $small-up);
+  @media #{$medium-up} {
+    background-image: image-url("#{$path-prefix}-m.jpg");
+  }
+  @include retina-bg(image-url("#{$path-prefix}-l.jpg"), $medium-up);
+  @media #{$large-up}  {
+    background-image: image-url("#{$path-prefix}-l.jpg");
+  }
+  @include retina-bg(image-url("#{$path-prefix}-xl.jpg"), $large-up);
+  @media #{$xlarge-up} {
+    background-image: image-url("#{$path-prefix}-xl.jpg");
+  }
+}
+
+@mixin responsive-height($path-prefix) {
+  @media #{$small-up}  {
+    height: image-height("_assets/images/#{$path-prefix}-s.jpg");
+  }
+  @media #{$medium-up} {
+    height: image-height("_assets/images/#{$path-prefix}-m.jpg");
+  }
+  @media #{$large-up}  {
+    height: image-height("_assets/images/#{$path-prefix}-l.jpg");
+  }
+  @media #{$xlarge-up} {
+    height: image-height("_assets/images/#{$path-prefix}-xl.jpg");
+  }
+}

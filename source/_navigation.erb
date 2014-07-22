@@ -1,0 +1,22 @@
+<%
+  home_path = on_page?('/') ? '' : p('/')
+%>
+<header id="navigation" class="fixed contain-to-grid hide-for-small">
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><%= link_to image_tag('logo.png', alt: "IMPACT generation logo"), home_path %></h1>
+      </li>
+    </ul>
+
+    <section class="top-bar-section">
+      <ul class="right"<%= "data-anchors" if home_path == "" %>>
+        <li><a href="<%= home_path %>#vision">Vision</a></li>
+        <li><a href="<%= home_path %>#heartbeat">Heartbeat</a></li>
+        <li><a href="<%= home_path %>#events">Events</a></li>
+        <li><a href="<%= home_path %>#resources">Resources</a></li>
+        <li><a href="<%= home_path %>#contact">Contact</a></li>
+      </ul>
+    </section>
+  </nav>
+</header>

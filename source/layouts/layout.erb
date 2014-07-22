@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta property="og:site_name" content="IMPACT">
+<meta property="og:title" content="IMPACT generation">
+<meta property="og:description" content="<%= t(:description).tr("\n", ' ') %>">
+<meta property="og:image" itemprop="photo" content="<%= image_path 'logo.png' %>">
+
+<title><%= current_page.data.title ? "IMPACT – #{current_page.data.title}" : "IMPACT generation" %></title>
+<meta name="description" content="<%= t(:description).tr("\n", ' ') %>">
+<meta name="keywords" content="christian, mission, mission trip, training, youth conference, seventh-day adventist, gospel">
+
+<%= stylesheet_link_tag :site %>
+<%= javascript_include_tag :mdrnzr %>
+</head>
+
+<body>
+
+<%= partial 'navigation' %>
+
+<%= yield %>
+
+<%= partial 'footer' %>
+
+<%= javascript_include_tag :site %>
+<%= partial 'google_analytics' %>
+</body>
+
+</html>

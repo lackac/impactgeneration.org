@@ -1,0 +1,22 @@
+footer {
+  background-color: #333132;
+
+  .impact-name {
+    line-height: 194px;
+    font-size: rem-calc(13);
+    color: white;
+
+    @media #{$small-only} {
+      line-height: 2;
+      text-align: center;
+    }
+  }
+
+  .impact-logo {
+    margin: 81px 0;
+
+    @media #{$small-only} {
+      margin: 16px auto;
+    }
+  }
+}

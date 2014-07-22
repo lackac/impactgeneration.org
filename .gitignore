@@ -1,0 +1,7 @@
+/.bundle
+/bin
+/vendor/ruby
+/bower_components
+/build
+/.sass-cache
+/.cache
