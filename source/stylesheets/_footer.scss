@@ -3,12 +3,14 @@ footer {
 
   .impact-name {
     line-height: 194px;
-    font-size: rem-calc(13);
     color: white;
 
     @media #{$small-only} {
       line-height: 2;
-      text-align: center;
+    }
+
+    em {
+      color: white;
     }
   }
 

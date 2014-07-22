@@ -1,0 +1,78 @@
+.impact-name {
+  line-height: 32px;
+  text-align: left;
+  font-size: rem-calc(13);
+  color: $loud-color;
+
+  @media #{$small-only} {
+    line-height: 2;
+    text-align: center;
+  }
+
+  em {
+    font-weight: bold;
+    font-style: normal;
+    color: $primary-color;
+  }
+}
+
+.bubble {
+  position: relative;
+  padding: rem-calc(30);
+  margin-top: 26px;
+  margin-bottom: 52px;
+  background-color: rgba($primary-color, .8);
+  color: white;
+
+  blockquote {
+    min-height: rem-calc(84);
+    font-size: rem-calc(22);
+    font-style: italic;
+
+    @media #{$medium-only} {
+      font-size: rem-calc(18);
+    }
+
+    @media #{$small-only} {
+      font-size: rem-calc(16);
+    }
+  }
+
+  figcaption {
+    margin-top: rem-calc(8);
+    font-size: rem-calc(16);
+    font-style: italic;
+    text-align: right;
+
+    @media #{$medium-only}, #{$small-only} {
+      font-size: rem-calc(13);
+    }
+  }
+}
+.bubble:after {
+  content: "";
+  display: block;
+  width: 0;
+  position: absolute;
+  bottom: -26px;
+  right: 78px;
+  border-width: 26px 0 0 26px;
+  border-style: solid;
+  border-color: rgba($primary-color, .8) transparent;
+}
+
+figure {
+  margin: 0;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+  border-left-width: 0;
+  line-height: 1.25;
+  color: $body-font-color;
+
+  .bubble & {
+    color: white;
+  }
+}

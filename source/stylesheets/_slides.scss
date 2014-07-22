@@ -61,3 +61,207 @@
     }
   }
 }
+
+#vision {
+  position: relative;
+
+  .slide-bg {
+    @include bg-cover;
+    @include responsive-bg("bg/water-drops");
+
+    height: 400px;
+  }
+
+  .bubble {
+    height: 200px;
+    margin-top: -150px;
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: rem-calc(24);
+    line-height: rem-calc(34);
+
+    @media #{$small-only} {
+      font-size: rem-calc(16);
+    }
+  }
+
+  .impact-meaning {
+    .impact-name {
+      @media #{$medium-only} {
+        font-size: rem-calc(12);
+      }
+
+      @media #{$small-only} {
+        margin: 1em 0;
+      }
+    }
+  }
+
+  .scroller {
+    position: static;
+    bottom: 0;
+    left: 0;
+    margin: rem-calc(24) auto;
+    background-color: $primary-color;
+  }
+
+  blockquote {
+    margin: 1em 0;
+    padding: 0 8px;
+    font-size: rem-calc(30);
+    font-weight: 100;
+    color: $body-font-color;
+
+    @media #{$small-only} {
+      font-size: rem-calc(18);
+    }
+  }
+
+  figcaption {
+    text-align: right;
+    font-size: rem-calc(14);
+    font-weight: bold;
+    color: $primary-color;
+  }
+}
+
+#heartbeat {
+  .heartbeat {
+    margin: rem-calc(64) auto;
+  }
+}
+
+#heartbeat-list {
+  @include responsive-bg("bg/wheat-field");
+
+  .bubble {
+    @media #{$small-only} {
+      padding: rem-calc(16);
+
+      p, li {
+        font-size: rem-calc(12);
+      }
+    }
+  }
+}
+
+#events {
+  li {
+    position: relative;
+    margin: 0 0 1.5em;
+    padding: 1.5em;
+    height: 7.5em;
+    text-align: center;
+    font-size: rem-calc(24);
+    background-color: lighten($quiet-color, 44%);
+
+    h2 {
+      font-weight: 900;
+    }
+
+    h2, div {
+      margin: 0;
+      line-height: 1.5em;
+      text-align: left;
+      font-size: rem-calc(24);
+      color: $primary-color;
+    }
+
+    .button {
+      position: absolute;
+      top: rem-calc(63);
+      right: rem-calc(36);
+    }
+
+    @media #{$small-only} {
+      height: auto;
+      font-size: rem-calc(16);
+
+      h2, div {
+        font-size: rem-calc(16);
+      }
+
+      .button {
+        position: static;
+        margin: 1em 0 0;
+        padding: rem-calc(9) rem-calc(16);
+        font-size: rem-calc(13);
+      }
+    }
+  }
+}
+
+#quotes {
+  @include responsive-bg("bg/field-sunset");
+
+  .medium-6 .bubble {
+    margin-top: 0;
+  }
+}
+
+#resources {
+  .fa {
+    font-size: rem-calc(48);
+    color: $primary-color;
+
+    @media #{$small-only} {
+      font-size: rem-calc(24);
+    }
+  }
+
+  ul {
+    padding: 1.5em;
+    font-size: rem-calc(24);
+    background-color: lighten($quiet-color, 44%);
+
+    li {
+      margin-bottom: rem-calc(24);
+    }
+
+    @media #{$small-only} {
+      font-size: rem-calc(14);
+    }
+  }
+}
+
+#quote-2 {
+  @include responsive-bg("bg/green-wheat-field");
+}
+
+#contact {
+  input[type=text], input[type=email], textarea {
+    @include radius(10px);
+    padding: 1em;
+    border-width: 0;
+    color: white;
+    background-color: $primary-color;
+  }
+
+  textarea {
+    height: 10em;
+  }
+
+  input[type=text]::-webkit-input-placeholder, input[type=email]::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: white;
+  }
+  input[type=text]:-moz-placeholder, input[type=email]:-moz-placeholder, textarea:-moz-placeholder {
+    color: white;
+    opacity: 1;
+  }
+  input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, textarea::-moz-placeholder {
+    color: white;
+    opacity: 1;
+  }
+  input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: white;
+  }
+
+  input[type=submit] {
+    position: absolute;
+    left: $column-gutter / 2;
+    bottom: -3px;
+
+    @media #{$small-only} {
+      position: static;
+    }
+  }
+}
