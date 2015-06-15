@@ -2,9 +2,9 @@
 
 class ContactForm {
 
-  protected $organization = 'IMPACT';
-  protected $senderMail   = 'info@impactnorge.no';
-  protected $infoMail     = 'info@impactnorge.no';
+  protected $organization = 'IMPACT generation';
+  protected $senderMail   = 'info@impactgeneration.org';
+  protected $infoMail     = 'info@impactgeneration.org';
 
   protected $subject = array(
     'visitor' => 'Thank you for your question',
