@@ -20,6 +20,11 @@
   }
 }
 
+.hashtag {
+  color: lighten(desaturate($primary-color, 80%), 20%);
+  font-style: normal;
+}
+
 .bubble {
   position: relative;
   padding: rem-calc(30);
