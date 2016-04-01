@@ -93,24 +93,21 @@
     <div class="row">
       <div class="small-10 small-centered columns">
         <ul class="no-bullet">
+          <% data.events.each do |event| %>
           <li>
-            <h2>IMPACT Trondheim (Norway) <a href="http://www.facebook.com/impactnorge"><i class="fa fa-facebook-square"></i></a></h2>
-            <div class="tagline">Having it all? <i class="hashtag">#TheExperienceIsReal</i></div>
-            <div class="dates">june 26 – july 11, 2016</div>
-            <a href="http://norway.impactgeneration.org" class="button radius">Go to event</a>
+            <h2>
+              <%= event["title"] %>
+              <% if event["facebook_page"] %>
+              <a href="https://www.facebook.com/<%= event["facebook_page"] %>"><i class="fa fa-facebook-square"></i></a>
+              <% end %>
+            </h2>
+            <% if event["tagline"] %>
+            <div class="tagline"><%= event["tagline"] %></div>
+            <% end %>
+            <div class="dates"><%= event["dates"] %></div>
+            <a href="<%= event["url"] %>" class="button radius">Go to event</a>
           </li>
-          <li>
-            <h2>IMPACT Kuusamo (Finland) <a href="https://www.facebook.com/impactsuomi"><i class="fa fa-facebook-square"></i></a></h2>
-            <div class="tagline">“Christ’s Method Alone”</div>
-            <div class="dates">august 1 – 7, 2016</div>
-            <a href="https://www.impactsuomi.org/" class="button radius">Go to event</a>
-          </li>
-          <li>
-            <h2>IMPACT business meeting (Romania) <a href="https://www.facebook.com/impactinromania"><i class="fa fa-facebook-square"></i></a></h2>
-            <div class="tagline">“In my Father’s business”</div>
-            <div class="dates">august 24 – 28, 2016</div>
-            <a href="https://www.facebook.com/impactinromania" class="button radius">Go to event</a>
-          </li>
+          <% end %>
         </ul>
       </div>
     </div>
